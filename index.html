@@ -1,56 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuotedAI — Quotes That Know Your Moment</title>
-    <meta name="description" content="4,000+ curated quotes delivered intelligently based on your time of day, energy level, and location. No ads. No tracking. Everything on your device.">
-    <style>
-        body { font-family: -apple-system, system-ui, sans-serif; max-width: 680px; margin: 60px auto; padding: 0 20px; color: #1d1d1f; line-height: 1.7; text-align: center; }
-        h1 { font-size: 36px; margin-bottom: 4px; }
-        .tagline { font-size: 20px; color: #86868b; margin-bottom: 40px; }
-        .description { text-align: left; font-size: 17px; margin-bottom: 40px; }
-        .stats { display: flex; justify-content: center; gap: 32px; margin: 32px 0; flex-wrap: wrap; }
-        .stat { text-align: center; }
-        .stat-number { font-size: 28px; font-weight: 700; color: #0066cc; }
-        .stat-label { font-size: 13px; color: #86868b; text-transform: uppercase; letter-spacing: 0.5px; }
-        .links { margin-top: 40px; padding-top: 24px; border-top: 1px solid #e5e5e7; }
-        .links a { display: inline-block; margin: 0 16px; color: #0066cc; text-decoration: none; font-size: 15px; }
-        .links a:hover { text-decoration: underline; }
-        .footer { margin-top: 48px; color: #86868b; font-size: 13px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quoted: daily quotes that name their source</title>
+<meta name="description" content="Quoted gives you one line for the moment you are in, and tells you where it came from: the book, the letter, the speech. No account, no ads. For iPhone, iPad and Apple Watch.">
+<meta name="apple-itunes-app" content="app-id=6744121383">
+<meta name="theme-color" content="#1C332E">
+<link rel="canonical" href="https://jakeintech.github.io/quotedai-site/">
+<link rel="icon" type="image/svg+xml" href="assets/img/mark.svg">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Quoted">
+<meta property="og:title" content="Quoted: daily quotes that name their source">
+<meta property="og:description" content="One line for the moment you are in, with the book, letter or speech it came from.">
+<meta property="og:url" content="https://jakeintech.github.io/quotedai-site/">
+<meta property="og:image" content="https://jakeintech.github.io/quotedai-site/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A line from Walden set in gilt on green book cloth, with its source beneath.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Quoted: daily quotes that name their source">
+<meta name="twitter:description" content="One line for the moment you are in, with the book, letter or speech it came from.">
+<meta name="twitter:image" content="https://jakeintech.github.io/quotedai-site/assets/img/og.png">
+<link rel="preload" href="assets/fonts/eb-garamond-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Quoted: Daily Quotes & Wisdom",
+  "operatingSystem": "iOS 18 or later, watchOS 10 or later",
+  "applicationCategory": "LifestyleApplication",
+  "description": "Quoted gives you one line for the moment you are in, and tells you where it came from.",
+  "url": "https://jakeintech.github.io/quotedai-site/",
+  "downloadUrl": "https://apps.apple.com/app/id6744121383",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "author": { "@type": "Person", "name": "Jake Williams" }
+}
+</script>
 </head>
 <body>
-    <h1>QuotedAI</h1>
-    <p class="tagline">Quotes That Know Your Moment</p>
+<a class="skip" href="#main">Skip to content</a>
 
-    <div class="stats">
-        <div class="stat">
-            <div class="stat-number">4,000+</div>
-            <div class="stat-label">Curated Quotes</div>
+<div class="on-cloth">
+<header class="wrap site-head">
+  <a class="brand" href="./" aria-label="Quoted home">
+    <svg viewBox="0 0 26 18" aria-hidden="true"><path fill="#CDAE66" d="M9.5 1C4.5 3 1.5 7 1.5 12a4.5 4.5 0 1 0 4.5-4.5c-.4 0-.8.05-1.1.14C5.600 5.300 7.300 3.600 10 2.400ZM22.500 1c-5 2-8 6-8 11a4.500 4.500 0 1 0 4.500-4.500c-.4 0-.8.05-1.100.14.7-2.340 2.400-4.040 5.100-5.240Z"/></svg>
+    Quoted
+  </a>
+  <nav class="site-nav" aria-label="Site">
+    <a href="#pricing">Pricing</a>
+    <a href="support.html">Support</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="wrap">
+    <p class="moment" id="moment">A line for the morning.</p>
+    <figure class="line" id="line">
+      <blockquote id="line-text">The morning wind forever blows, the poem of creation is uninterrupted; but few are the ears that hear it.</blockquote>
+      <figcaption>
+        <div class="who" id="line-who">Henry David Thoreau</div>
+        <div class="source">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="10" cy="10" r="8.500" stroke-width="1.500"/><path d="M6.200 10.300l2.600 2.600 5-5.600" stroke-width="1.700" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Checked against the source: <a id="line-source" href="https://www.gutenberg.org/ebooks/205"><cite>Walden</cite>, &ldquo;Where I Lived, and What I Lived For&rdquo;, 1854</a></span>
         </div>
-        <div class="stat">
-            <div class="stat-number">29</div>
-            <div class="stat-label">Categories</div>
+      </figcaption>
+    </figure>
+    <p class="why" id="line-why">Chosen for the first hours of the day. Thoreau wrote it in the chapter where he explains why he went to the pond at all.</p>
+    <ul class="hours" id="hours" hidden>
+      <li><button type="button" data-hour="morning" aria-pressed="true">Morning</button></li>
+      <li><button type="button" data-hour="afternoon" aria-pressed="false">Afternoon</button></li>
+      <li><button type="button" data-hour="evening" aria-pressed="false">Evening</button></li>
+      <li><button type="button" data-hour="night" aria-pressed="false">Night</button></li>
+    </ul>
+  </div>
+</section>
+
+<section class="pitch">
+  <div class="wrap">
+    <div>
+      <h1>Quotes that know your moment, and name their source.</h1>
+      <p>Quoted picks one line for the hour you are in, then tells you where it came from: the book, the letter, the speech. It never writes a line and signs a real person&rsquo;s name to it.</p>
+    </div>
+    <div class="get">
+      <a class="btn" href="https://apps.apple.com/app/id6744121383">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10M5.500 9 10 13.500 14.500 9M4 17h12"/></svg>
+        Download on the App Store
+      </a>
+      <p class="fine">Free. For iPhone, iPad and Apple Watch.</p>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="on-paper">
+
+<section class="page">
+  <div class="wrap split">
+    <div class="copy">
+      <h2>Words someone actually said.</h2>
+      <p>Most quote apps cannot tell you where a line came from, and a good share of what circulates was never said by the person named. Quoted keeps the record with the line.</p>
+      <p>Lines traced to their source carry a mark and the reference: the work, the chapter or letter, the year, the translator when there is one. Tap the mark to read the passage around it.</p>
+      <div class="left-out">
+        <p>Some lines you will not find here.</p>
+        <p>The famous Harriet Tubman sayings are missing, because none can be traced to anything she said or wrote. &ldquo;I disapprove of what you say, but I will defend to the death your right to say it&rdquo; is not Voltaire. His biographer Evelyn Beatrice Hall wrote it in 1906.</p>
+      </div>
+    </div>
+    <div class="record" role="group" aria-label="The record kept for one line">
+      <blockquote>Men are disturbed not by the things which happen, but by the opinions about the things.</blockquote>
+      <dl>
+        <div><dt>Who</dt><dd>Epictetus</dd></div>
+        <div><dt>Where</dt><dd><cite>The Encheiridion</cite>, section 5</dd></div>
+        <div><dt>When</dt><dd>About 125 CE, written down by his student Arrian</dd></div>
+        <div><dt>Translation</dt><dd>George Long, 1877</dd></div>
+        <div><dt>Read it</dt><dd><a href="https://www.gutenberg.org/ebooks/10661">gutenberg.org/ebooks/10661</a></dd></div>
+        <div><dt>Status</dt><dd><span class="seal"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="10" cy="10" r="8.500" stroke-width="1.500"/><path d="M6.200 10.300l2.600 2.600 5-5.600" stroke-width="1.700" stroke-linecap="round" stroke-linejoin="round"/></svg>Matches the source word for word</span></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="wrap split">
+    <div class="ask" role="group" aria-label="An example of asking Quoted for a line">
+      <p class="asked">You asked for <q>something about being scared to start</q></p>
+      <ol>
+        <li>
+          <p>Do that which is assigned you, and you cannot hope too much or dare too much.</p>
+          <cite>Ralph Waldo Emerson, &ldquo;Self-Reliance&rdquo;, 1841</cite>
+        </li>
+        <li>
+          <p>If you have built castles in the air, your work need not be lost; that is where they should be. Now put the foundations under them.</p>
+          <cite>Henry David Thoreau, Walden, &ldquo;Conclusion&rdquo;, 1854</cite>
+        </li>
+      </ol>
+    </div>
+    <div class="copy">
+      <h2>Ask in your own words.</h2>
+      <p>Describe the moment the way you would to a friend. Quoted searches its library on your device and answers with real lines from people who once needed the same thing.</p>
+      <p>Hold any line to see why it was chosen: the hour, the themes you keep returning to, the place you are in.</p>
+      <p class="fine">The panel shows the kind of answer Ask gives. Your own results depend on your question.</p>
+    </div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="wrap">
+    <h2>One line can frame a whole day.</h2>
+    <div class="copy"><p>Quoted is a practice more than a feed. Four small tools turn a line into something you do.</p></div>
+    <ol class="day">
+      <li>
+        <time>Morning</time>
+        <div><h3>Dawn Line <span class="tier">Free</span></h3><p>One line and one intention before the day gets loud.</p></div>
+      </li>
+      <li>
+        <time>Midday</time>
+        <div><h3>Anchor Session <span class="tier">Pro</span></h3><p>A line that stays on screen through a focus block, on your Lock Screen and in the Dynamic Island.</p></div>
+      </li>
+      <li>
+        <time>Evening</time>
+        <div><h3>Evening Echo <span class="tier">Pro</span></h3><p>Close the day in three lines of your own. Quoted finds the saved line that answers them.</p></div>
+      </li>
+      <li>
+        <time>Any hour</time>
+        <div><h3>Journal from Quote <span class="tier">Pro</span></h3><p>Start a page from a line you kept. The journal lives on your device.</p></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="page">
+  <div class="wrap">
+    <h2>Where you already look.</h2>
+    <div class="places">
+      <div><h3>Home Screen</h3><p>Widgets in every size, with the source under the line.</p></div>
+      <div><h3>Lock Screen</h3><p>Today&rsquo;s line beside the clock.</p></div>
+      <div><h3>StandBy</h3><p>A line for the nightstand while the phone charges.</p></div>
+      <div><h3>Apple Watch</h3><p>An app and complications. One line, one glance.</p></div>
+      <div><h3>Siri and Shortcuts</h3><p>Ask for a line about anything, or have one read aloud.</p></div>
+      <div><h3>CarPlay and Focus</h3><p>Read-aloud on the road, and themes that follow your Focus.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="wrap split">
+    <div class="copy">
+      <h2>Private because of how it is built.</h2>
+      <p>There is no account, no advertising and no analytics software. Choosing a line, searching, and explaining a choice all happen on your device.</p>
+    </div>
+    <ul class="plain">
+      <li><b>Stays on your device:</b> what you read, save, write and ask for.</li>
+      <li><b>Goes to your own iCloud:</b> saved lines and settings, if you use sync.</li>
+      <li><b>Asks Wikipedia:</b> an author&rsquo;s portrait and short biography. You can switch this off.</li>
+      <li><b>Asks Apple:</b> place search when you add a location, the weather where you are if you allow location, and purchases.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="page" id="pricing">
+  <div class="wrap">
+    <h2>Free to read. Pro to make it a practice.</h2>
+    <div class="plans">
+      <div class="plan">
+        <h3>Quoted</h3>
+        <p class="lead">Free</p>
+        <ul>
+          <li>A line chosen for your moment, every day</li>
+          <li>Sources, and the passage around the line</li>
+          <li>Ask in your own words</li>
+          <li>Widgets, Lock Screen, StandBy and Apple Watch</li>
+          <li>Saved lines and share cards</li>
+          <li>Dawn Line</li>
+        </ul>
+      </div>
+      <div class="plan pro">
+        <h3>Quoted Pro</h3>
+        <p class="lead">Everything in free, and:</p>
+        <div class="prices">
+          <div><b>$4.99</b><span>a month</span></div>
+          <div><b>$29.99</b><span>a year</span></div>
+          <div><b>$59.99</b><span>once</span></div>
         </div>
-        <div class="stat">
-            <div class="stat-number">0</div>
-            <div class="stat-label">Data Collected</div>
-        </div>
+        <ul>
+          <li>Anchor Session, Evening Echo and Top Three</li>
+          <li>Journal from Quote, with no limit on entries</li>
+          <li>Lines read aloud</li>
+          <li>Unlimited collections and your own categories</li>
+          <li>Every share card style, without the Quoted mark</li>
+        </ul>
+        <p class="fine">US prices. The yearly plan starts with a 7-day free trial for new subscribers. Subscriptions renew until cancelled. The one-time purchase never renews.</p>
+      </div>
     </div>
+  </div>
+</section>
 
-    <div class="description">
-        <p>QuotedAI delivers the right words at the right moment. It learns your rhythm — your time of day, energy level, workout intensity, and location — to surface quotes that actually resonate.</p>
-        <p>4,000+ handpicked quotes across 29 categories: Wisdom, Motivation, Stoicism, Religion (Christianity, Islam, Judaism, Buddhism, Hinduism, Sikhism), Spirituality, Mindset, Wellness, Pop Culture, Music, and more.</p>
-        <p>Widgets on your home screen, lock screen, Dynamic Island, and Apple Watch. Beautiful share cards for Instagram and TikTok. No ads, no tracking, no accounts. Everything on your device.</p>
+<section class="page" id="faq">
+  <div class="wrap">
+    <h2>Before you download.</h2>
+    <div class="faq">
+      <details>
+        <summary>Where do the quotes come from?</summary>
+        <p>From books, letters, speeches and scriptures, chosen by hand. Lines marked as checked have been matched word for word against a public source, and the app shows you the reference and the surrounding passage. Lines without the mark are attributed in the usual way and have not yet been traced.</p>
+      </details>
+      <details>
+        <summary>Does Quoted use AI to write quotes?</summary>
+        <p>No. It finds and ranks real lines; it does not write one and put a person&rsquo;s name on it. Affirmations in the app are written in-house and shown with no attribution.</p>
+      </details>
+      <details>
+        <summary>How does it know my moment?</summary>
+        <p>From the hour, the themes you choose and save, and, only if you allow them, your activity from Apple Health and the places you set. All of it is read on your device. Hold any line to see the reasons.</p>
+      </details>
+      <details>
+        <summary>What does it cost?</summary>
+        <p>Quoted is free to download and use. Quoted Pro is $4.99 a month, $29.99 a year with a 7-day free trial, or $59.99 once. Prices are for the United States.</p>
+      </details>
+      <details>
+        <summary>What leaves my device?</summary>
+        <p>Very little, and none of it to us. Sync uses your own iCloud. Author portraits and biographies come from Wikipedia, which you can turn off. Place search, weather and purchases go through Apple. The <a href="privacy-policy.html">privacy policy</a> lists every case.</p>
+      </details>
+      <details>
+        <summary>Which devices does it run on?</summary>
+        <p>iPhone and iPad with iOS 18 or later, and Apple Watch with watchOS 10 or later.</p>
+      </details>
+      <details>
+        <summary>I think an attribution is wrong.</summary>
+        <p>Tell us. Write to <a href="mailto:quotedaiapp@gmail.com">quotedaiapp@gmail.com</a> with the line and what you know. A line that cannot be traced is removed.</p>
+      </details>
+      <details>
+        <summary>How do I cancel a subscription?</summary>
+        <p>Open Settings on your iPhone, tap your name, then Subscriptions, then Quoted Pro. If you cancel during the free trial you are not charged.</p>
+      </details>
     </div>
+  </div>
+</section>
 
-    <div class="links">
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms-of-service.html">Terms of Service</a>
-        <a href="support.html">Support</a>
-    </div>
+</div>
 
-    <p class="footer">&copy; 2026 QuotedAI. All rights reserved.</p>
+<section class="closing on-cloth">
+  <div class="wrap">
+    <blockquote>Trust thyself: every heart vibrates to that iron string.</blockquote>
+    <p class="who">Ralph Waldo Emerson, &ldquo;Self-Reliance&rdquo;, 1841</p>
+    <a class="btn" href="https://apps.apple.com/app/id6744121383">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10M5.500 9 10 13.500 14.500 9M4 17h12"/></svg>
+      Download on the App Store
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <nav aria-label="Footer">
+      <a href="support.html">Support</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Use</a>
+      <a href="mailto:quotedaiapp@gmail.com">Contact</a>
+    </nav>
+    <p>Source texts from Project Gutenberg. Author portraits and biographies from Wikipedia, under CC BY-SA.</p>
+    <p>&copy; 2026 Jake Williams. Apple, iPhone, iPad, Apple Watch and App Store are trademarks of Apple Inc.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var lines = {
+    morning: {
+      text: "The morning wind forever blows, the poem of creation is uninterrupted; but few are the ears that hear it.",
+      who: "Henry David Thoreau",
+      source: "<cite>Walden</cite>, “Where I Lived, and What I Lived For”, 1854",
+      href: "https://www.gutenberg.org/ebooks/205",
+      why: "Chosen for the first hours of the day. Thoreau wrote it in the chapter where he explains why he went to the pond at all."
+    },
+    afternoon: {
+      text: "A man is relieved and gay when he has put his heart into his work and done his best; but what he has said or done otherwise shall give him no peace.",
+      who: "Ralph Waldo Emerson",
+      source: "“Self-Reliance”, <cite>Essays, First Series</cite>, 1841",
+      href: "https://www.gutenberg.org/ebooks/2944",
+      why: "Chosen for the working part of the day, when the question is whether the work in front of you has your heart in it."
+    },
+    evening: {
+      text: "The day advanced as if to light some work of mine; it was morning, and lo, now it is evening, and nothing memorable is accomplished.",
+      who: "Henry David Thoreau",
+      source: "<cite>Walden</cite>, “Sounds”, 1854",
+      href: "https://www.gutenberg.org/ebooks/205",
+      why: "Chosen for the end of the day. Thoreau is describing a day spent sitting in his doorway, and he counted it well spent."
+    },
+    night: {
+      text: "Men are disturbed not by the things which happen, but by the opinions about the things.",
+      who: "Epictetus",
+      source: "<cite>The Encheiridion</cite>, section 5, translated by George Long",
+      href: "https://www.gutenberg.org/ebooks/10661",
+      why: "Chosen for the hours when small things grow. It comes from the handbook his student Arrian wrote down."
+    }
+  };
+  var names = { morning: "in the morning", afternoon: "in the afternoon", evening: "in the evening", night: "at night" };
+  function hourOf(d) {
+    var h = d.getHours();
+    if (h >= 5 && h < 12) return "morning";
+    if (h >= 12 && h < 17) return "afternoon";
+    if (h >= 17 && h < 21) return "evening";
+    return "night";
+  }
+  var figure = document.getElementById("line");
+  var why = document.getElementById("line-why");
+  var moment = document.getElementById("moment");
+  var hours = document.getElementById("hours");
+  var now = new Date();
+  var mine = hourOf(now);
+  var mm = now.getMinutes();
+  var clock = (now.getHours() % 12 || 12) + ":" + (mm < 10 ? "0" : "") + mm;
+  var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function show(key, instant) {
+    var l = lines[key];
+    function swap() {
+      document.getElementById("line-text").textContent = l.text;
+      document.getElementById("line-who").textContent = l.who;
+      var a = document.getElementById("line-source");
+      a.innerHTML = l.source;
+      a.href = l.href;
+      why.textContent = l.why;
+      moment.textContent = key === mine
+        ? "It is " + clock + " " + names[key] + " where you are."
+        : "And " + names[key] + ":";
+      figure.classList.remove("turning");
+      why.classList.remove("turning");
+    }
+    Array.prototype.forEach.call(hours.querySelectorAll("button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-hour") === key ? "true" : "false");
+    });
+    if (instant || still) { swap(); return; }
+    figure.classList.add("turning");
+    why.classList.add("turning");
+    setTimeout(swap, 220);
+  }
+
+  hours.hidden = false;
+  hours.addEventListener("click", function (e) {
+    var b = e.target.closest("button");
+    if (b) show(b.getAttribute("data-hour"), false);
+  });
+  show(mine, true);
+})();
+</script>
 </body>
 </html>
